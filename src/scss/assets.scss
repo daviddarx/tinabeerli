@@ -1,11 +1,10 @@
 //fonts
 @mixin fontRunText() {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Aestetico-Light, Arial, Helvetica, sans-serif;
 }
 
 @mixin fontTitle() {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: Aestetico-Bold, Arial, Helvetica, sans-serif;
 }
 
 // utilities
@@ -76,8 +75,8 @@ $breakpoints: (
 // styles
 :root {
   //colors
-  --c-text: #005560;
-  --c-bg: #C7F2C7;
+  --c-text: hsl(187, 100%, 19%);
+  --c-bg: hsl(120, 63%, 86%);
 
   //sizes
   --s-text: 1.75rem;
