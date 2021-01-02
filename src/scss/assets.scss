@@ -1,4 +1,12 @@
 //fonts
+@mixin fontRunText() {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@mixin fontTitle() {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
 
 // utilities
 $breakpoints: (
@@ -68,12 +76,16 @@ $breakpoints: (
 // styles
 :root {
   //colors
-  --c-text: black;
+  --c-text: #005560;
+  --c-bg: #C7F2C7;
 
   //sizes
-  --s-text: 1rem;
+  --s-text: 1.75rem;
+  --s-text-s: calc(var(--s-text) * 0.6);
   --s-line-height: 1.5;
-  --s-gutter: 2vw;
+  --s-margin-top-p: calc(var(--s-text) * 1.5);
+  --s-margin-top-h: calc(var(--s-text) * 2.5);
+  --s-gutter: 4vw;
 
   //eases https://matthewlein.com/tools/ceaser
   --e-in: cubic-bezier(0.895, 0.03, 0.685, 0.22); // quart

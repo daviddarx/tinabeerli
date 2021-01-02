@@ -1,7 +1,8 @@
 
 <template>
-  <div class="footer">
-    ©2021 Tina Beerli – Impressum
+  <div class="contact">
+    +41 79 614 26 18<br>
+    mail@tinabeerli.ch
   </div>
 </template>
 

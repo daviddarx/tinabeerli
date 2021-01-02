@@ -10,24 +10,31 @@
     >
       <router-link
         class="navigation__link"
-        to="/page-01"
+        to="/home"
       >
-        Page 01
+        <span class="navigation__el">
+          Home
+        </span>
       </router-link>
       <router-link
         class="navigation__link"
-        to="/page-02"
+        to="/beratung"
       >
-        Page 02
+        <span class="navigation__el">
+          Beratung
+        </span>
       </router-link>
       <router-link
         class="navigation__link"
-        to="/page-03"
+        to="/ueber-mich"
       >
-        Page 03
+        <span class="navigation__el">
+          Über mich
+        </span>
       </router-link>
     </div>
   </nav>
+
 </template>
 
 <script>
