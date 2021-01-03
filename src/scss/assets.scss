@@ -75,11 +75,11 @@ $breakpoints: (
 // styles
 :root {
   //colors
-  --c-text: hsl(187, 100%, 19%);
-  --c-bg: hsl(120, 63%, 86%);
+  --c-text: hsl(207, 100%, 28%);
+  --c-bg: hsl(144, 63%, 86%);
 
   //sizes
-  --s-text: 1.75rem;
+  --s-text: 2rem;
   --s-text-s: calc(var(--s-text) * 0.6);
   --s-line-height: 1.5;
   --s-margin-top-p: calc(var(--s-text) * 1.5);
