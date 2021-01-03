@@ -7,7 +7,7 @@
       'is-android': this.isAndroid
     }"
   >
-    <h1 class="visually-hidden">Boilerplate Vue.js</h1>
+    <h1 class="visually-hidden">Tina Beerli – Psychologische Beratung &amp; Coaching</h1>
 
     <logo></logo>
 
