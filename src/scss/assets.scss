@@ -79,6 +79,7 @@ $breakpoints: (
   --c-bg: hsl(144, 63%, 86%);
 
   //sizes
+  --s-gutter: 4vw;
   --s-text: 2rem;
   --s-text-s: calc(var(--s-text) * 0.6);
   --s-text-logo: calc(var(--s-text) * 1.8);
@@ -86,7 +87,10 @@ $breakpoints: (
   --s-margin-top-content: calc(50vh - 0.27em);
   --s-margin-bottom-p: calc(var(--s-text) * 1.5);
   --s-margin-top-h: calc(var(--s-text) * 2.5);
-  --s-gutter: 4vw;
+  --s-page-transition-y: 20vh;
+
+  //durations
+  --d-page-transition-y: 0.5s;
 
   //eases https://matthewlein.com/tools/ceaser
   --e-in: cubic-bezier(0.895, 0.03, 0.685, 0.22); // quart

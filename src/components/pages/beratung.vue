@@ -1,21 +1,25 @@
 
 <template>
   <div
+    class="consulting"
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
   >
-    <h2 class="visually-hidden">
-      Beratung
-    </h2>
+    <div class="content__container">
 
-    <p>
-      Meine Beratung ist ziel-, lösungs- und ressourcenorientiert. Sie richtet sich nach dem Machbaren aus und versucht gleichzeitig achtsam das Wünschenswerte mit einzubeziehen. Sie sind der Experte Ihres Lebensweges und ich kann Ihnen mit meinem Fachwissen und entsprechenden Inputs eine Wegbegleiterin sein.
-    </p>
+      <h2 class="visually-hidden">
+        Beratung
+      </h2>
 
-    <p>
-      Vernetztes, ganzheitliches und inklusives Denken ist für mich wichtig, um den Bedürfnissen meines Gegenübers so gerecht wie möglich zu werden. Der Respekt gegenüber Werte und Haltungen anderer ist für mich dabei eine Grundhaltung.
-    </p>
+      <p>
+        Meine Beratung ist ziel-, lösungs- und ressourcenorientiert. Sie richtet sich nach dem Machbaren aus und versucht gleichzeitig achtsam das Wünschenswerte mit einzubeziehen. Sie sind der Experte Ihres Lebensweges und ich kann Ihnen mit meinem Fachwissen und entsprechenden Inputs eine Wegbegleiterin sein.
+      </p>
 
-    <h3>Themen</h3>
+      <p>
+        Vernetztes, ganzheitliches und inklusives Denken ist für mich wichtig, um den Bedürfnissen meines Gegenübers so gerecht wie möglich zu werden. Der Respekt gegenüber Werte und Haltungen anderer ist für mich dabei eine Grundhaltung.
+      </p>
+
+      <h3>Themen</h3>
+
       <ul>
         <li>
           Beziehung
@@ -71,6 +75,7 @@
         Die Kosten werden nicht von der Krankenkasse übernommen. Nach Absprache ist eine Anpassung entsprechend Ihren finanziellen Verhältnissen möglich.
       </p>
 
+    </div>
   </div>
 </template>
 

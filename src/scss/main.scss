@@ -120,18 +120,24 @@ li {
   &__el {
     position: relative;
 
+    &::before {
+      --s-bullet: 0.35em;
+
+      content: "";
+      position: absolute;
+      width: var(--s-bullet);
+      height: var(--s-bullet);
+      top: 0.45em;
+      left: -1.05em;
+      background-color: var(--c-text);
+      border-radius: 50%;
+      transform: scale(0);
+      transition: transform ease-in-out 0.25s;
+    }
+
     .is-current & {
       &::before {
-        --s-bullet: 0.35em;
-
-        content: "";
-        position: absolute;
-        width: var(--s-bullet);
-        height: var(--s-bullet);
-        top: 0.45em;
-        left: -1.05em;
-        background-color: var(--c-text);
-        border-radius: 50%;
+        transform: scale(1);
       }
     }
   }
@@ -153,6 +159,15 @@ li {
   padding-left: 0;
   padding-top: var(--s-margin-top-content);
   box-sizing: border-box;
+
+  &__container {
+    transform: translateY(var(--s-page-transition-y));
+    transition: transform var(--e-out) var(--d-page-transition-y);
+
+    .is-displayed & {
+      transform: translateY(0);
+    }
+  }
 
   h2,
   h3,
@@ -192,12 +207,19 @@ li {
 
 .about {
   &__img {
+    --s-t-left: calc(var(--s-gutter) * -1);
+
     position: fixed;
+    z-index: -1;
     height: 50vh;
     right: 50%;
     bottom: 0%;
-    transform: translate(calc(var(--s-gutter) * -1), 0);
-    z-index: -1;
+    transform: translate(var(--s-t-left), var(--s-page-transition-y));
+    transition: transform var(--e-out) calc(var(--d-page-transition-y) * 1.5);
+
+    .is-displayed & {
+      transform: translate(var(--s-t-left), 0);
+    }
   }
 }
 
