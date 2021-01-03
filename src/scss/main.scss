@@ -158,19 +158,20 @@ li {
   h5,
   h6 {
     margin-top: var(--s-margin-top-h);
-  }
+    margin-bottom: var(--s-margin-bottom-p);
 
-  p {
-    margin-top: var(--s-margin-top-p);
-
-    &:first-of-type {
+    &.no-margin-top {
       margin-top: 0;
     }
   }
 
+  p {
+    margin-bottom: var(--s-margin-bottom-p);
+  }
+
   ul,
   dl {
-    margin-top: var(--s-margin-top-p);
+    margin-bottom: var(--s-margin-bottom-p);
   }
 
   dl {
