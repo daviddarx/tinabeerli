@@ -10,9 +10,9 @@
         class="logo__link"
         to="/"
       >
-        <h1 class="logo__name">
+        <p class="logo__name">
           Tina Beerli
-        </h1>
+        </p>
         <p class="logo__subline">
           Psychologische Beratung &amp; Coaching
         </p>

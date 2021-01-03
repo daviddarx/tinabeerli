@@ -89,6 +89,8 @@ li {
   }
 
   &__name {
+    @include fontTitle;
+
     font-size: var(--s-text-logo);
     display: inline-block;
   }
