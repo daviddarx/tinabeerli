@@ -16,8 +16,12 @@
 
       <p>
         Tina Beerli<br>
-        Psychologische Beratung &amp; Coaching<br><br>
-        Albisriederstrasse 100, 8003 Zürich<br>
+        Psychologische Beratung &amp; Coaching<br>
+        Albisriederstrasse 100<br>
+        8003 Zürich
+      </p>
+
+      <p>
         +41 79 614 26 18<br>
         <a href="mailto:hallo@tinabeerli.ch" target="_blank">hallo@tinabeerli.ch</a>
       </p>
