@@ -88,15 +88,23 @@ li {
     text-decoration: none;
   }
 
+  &__name {
+    font-size: var(--s-text-logo);
+    display: inline-block;
+  }
+
   &__subline {
     font-size: var(--s-text-s);
+    display: inline-block;
+    width: 10em;
+    padding-left: 1em;
   }
 }
 
 .navigation {
   position: fixed;
   z-index: 20;
-  top: 50vh;
+  top: var(--s-margin-top-content);
   left: var(--s-gutter);
 
   &__link {
@@ -105,12 +113,24 @@ li {
     display: block;
     font-weight: bold;
     text-decoration: none;
-    margin-bottom: 0.2em;
   }
 
   &__el {
+    position: relative;
+
     .is-current & {
-      text-decoration: underline;
+      &::before {
+        --s-bullet: 0.35em;
+
+        content: "";
+        position: absolute;
+        width: var(--s-bullet);
+        height: var(--s-bullet);
+        top: 0.45em;
+        left: -1.05em;
+        background-color: var(--c-text);
+        border-radius: 50%;
+      }
     }
   }
 }
@@ -129,7 +149,7 @@ li {
   left: 50vw;
   padding: var(--s-gutter);
   padding-left: 0;
-  padding-top: 50vh;
+  padding-top: var(--s-margin-top-content);
   box-sizing: border-box;
 
   h2,
@@ -172,8 +192,8 @@ li {
     position: fixed;
     height: 50vh;
     right: 50%;
-    top: 0%;
-    transform: translate(calc(var(--s-gutter) * -1), var(--s-gutter));
+    bottom: 0%;
+    transform: translate(calc(var(--s-gutter) * -1), 0);
     z-index: -1;
   }
 }
