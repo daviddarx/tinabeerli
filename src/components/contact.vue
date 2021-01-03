@@ -2,7 +2,7 @@
 <template>
   <div class="contact">
     +41 79 614 26 18<br>
-    <a href="mailto:hallo@tinabeerli.ch" target="_blank" class="text-link">hallo@tinabeerli.ch</a>
+    <a href="mailto:hallo@tinabeerli.ch" target="_blank">hallo@tinabeerli.ch</a>
   </div>
 </template>
 
