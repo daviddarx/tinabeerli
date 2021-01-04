@@ -83,6 +83,7 @@ li {
   z-index: 20;
   top: var(--s-gutter);
   left: var(--s-gutter);
+  margin-top: -0.5em;
 
   &__link {
     text-decoration: none;
