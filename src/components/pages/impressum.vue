@@ -59,7 +59,7 @@
       </p>
 
       <p>
-        Diese Impressum wurde erstellt am <a href="https://impressumgeneratorschweiz.de/" target="_blank">impressumgeneratorschweiz.de</a>.
+        Diese Impressum wurde erstellt mit <a href="https://impressumgeneratorschweiz.de/" target="_blank">impressumgeneratorschweiz.de</a>.
       </p>
 
     </div>
