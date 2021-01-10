@@ -29,8 +29,8 @@ collections:
 
   - name: "beratung"
     label: "Beratung"
-    create: true
-    delete: true
+    create: false
+    delete: false
     folder: "content/beratung"
     slug: "beratung"
     extension: "json"
@@ -48,6 +48,7 @@ collections:
         fields:
           - label: "Text Content"
             name: "textcontent"
+            required: false
             widget: "markdown"
             buttons:
               - bold
