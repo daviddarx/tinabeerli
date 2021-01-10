@@ -26,3 +26,48 @@ collections:
         buttons:
           - bold
           - link
+
+  - name: "beratung"
+    label: "Beratung"
+    create: true
+    delete: true
+    folder: "content/beratung"
+    slug: "beratung"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Text Content"
+            name: "textcontent"
+            widget: "markdown"
+            buttons:
+              - bold
+              - link
+              - heading-three
+              - bulleted-list
+          - label: "Definition List"
+            name: "definitionlist"
+            widget: "object"
+            required: false
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                required: false
+
+              - label: "Description"
+                name: "desc"
+                widget: "markdown"
+                required: false
+                buttons:
+                - bold
+                - link
