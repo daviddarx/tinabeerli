@@ -48,6 +48,9 @@ collections:
         widget: "list"
         required: false
         fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
           - label: "Text Content"
             name: "textcontent"
             required: false
