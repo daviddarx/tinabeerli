@@ -11,8 +11,33 @@
       </h2>
 
       <div
-        class="content__md"
+        class="content__group"
+        v-for="item in beratung.content"
+        v-bind:key="item.title"
       >
+        <div
+          v-if="item.textcontent"
+          v-html="getHTMLfromMD(item.textcontent)"
+        >
+        </div>
+        <dl
+          v-if="item.listcontent"
+        >
+          <template
+            v-for="list in item.listcontent"
+          >
+            <dt
+              v-bind:key="list.definitionlist.title"
+              v-html="list.definitionlist.title"
+            >
+            </dt>
+            <dd
+              v-bind:key="list.definitionlist.desc"
+              v-html="getHTMLfromMD(list.definitionlist.desc)"
+            >
+            </dd>
+          </template>
+        </dl>
       </div>
     </div>
   </div>
@@ -32,6 +57,7 @@
       }
     },
     mounted () {
+      console.log(beratung);
       setTimeout(this.display, 100);
     },
 
