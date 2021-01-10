@@ -77,3 +77,26 @@ collections:
                     buttons:
                     - bold
                     - link
+
+  - name: "uebermich"
+    label: "Über mich"
+    create: true
+    delete: true
+    folder: "content/"
+    slug: "uebermich"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "markdown"
+        buttons:
+          - bold
+          - link
+          - heading-three
+          - bulleted-list
