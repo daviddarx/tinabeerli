@@ -26,6 +26,8 @@ collections:
         buttons:
           - bold
           - link
+          - heading-three
+          - bulleted-list
 
   - name: "beratung"
     label: "Beratung"
