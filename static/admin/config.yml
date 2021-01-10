@@ -21,7 +21,7 @@ collections:
         widget: "string"
 
       - label: "Content"
-        name: "desc"
+        name: "content"
         widget: "markdown"
         buttons:
           - bold
