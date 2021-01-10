@@ -8,8 +8,8 @@ public_folder: "/images/uploads"
 collections:
   - name: "home"
     label: "Home"
-    create: true
-    delete: true
+    create: false
+    delete: false
     folder: "content/home"
     slug: "home"
     extension: "json"
