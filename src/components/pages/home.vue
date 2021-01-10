@@ -21,7 +21,7 @@
 
 <script>
   import Vue from "vue";
-  import * as home from '../../../content/home/home.json';
+  import * as home from '../../../content/home.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
 
   export default Vue.extend({
