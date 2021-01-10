@@ -54,20 +54,25 @@ collections:
               - link
               - heading-three
               - bulleted-list
-          - label: "Definition List"
-            name: "definitionlist"
-            widget: "object"
+          - label: "List Content"
+            name: "listcontent"
+            widget: "list"
             required: false
             fields:
-              - label: "Title"
-                name: "title"
-                widget: "string"
+              - label: "Definition List"
+                name: "definitionlist"
+                widget: "object"
                 required: false
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                    required: false
 
-              - label: "Description"
-                name: "desc"
-                widget: "markdown"
-                required: false
-                buttons:
-                - bold
-                - link
+                  - label: "Description"
+                    name: "desc"
+                    widget: "markdown"
+                    required: false
+                    buttons:
+                    - bold
+                    - link
