@@ -31,7 +31,7 @@ collections:
     label: "Beratung"
     create: false
     delete: false
-    folder: "content/beratung"
+    folder: "content/"
     slug: "beratung"
     extension: "json"
     format: "json"
