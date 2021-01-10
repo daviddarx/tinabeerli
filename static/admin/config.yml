@@ -80,8 +80,8 @@ collections:
 
   - name: "uebermich"
     label: "Über mich"
-    create: true
-    delete: true
+    create: false
+    delete: false
     folder: "content/"
     slug: "uebermich"
     extension: "json"
