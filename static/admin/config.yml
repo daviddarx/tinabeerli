@@ -6,12 +6,12 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "specialAnnouncement"
-    label: "Special Announcement"
-    create: false
-    delete: false
-    folder: "_content/specialAnnouncement"
-    slug: "specialannouncement"
+  - name: "home"
+    label: "Home"
+    create: true
+    delete: true
+    folder: "content/home"
+    slug: "home"
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"
@@ -20,14 +20,9 @@ collections:
         name: "title"
         widget: "string"
 
-      - label: "Button Title"
-        name: "buttonTitle"
-        widget: "string"
-
-      - label: "Description"
+      - label: "Content"
         name: "desc"
         widget: "markdown"
         buttons:
           - bold
-          - italic
           - link
