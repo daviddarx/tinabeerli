@@ -229,7 +229,7 @@ li {
     right: 50%;
     bottom: var(--s-gutter);
     transform: translate(var(--s-t-left), calc(var(--s-page-transition-y) + 100%));
-    transition: transform var(--e-out) calc(var(--d-page-transition-y) * 1.5);
+    transition: transform var(--e-out) calc(var(--d-page-transition-y) * 1.2);
 
     .is-displayed & {
       transform: translate(var(--s-t-left), 0);
