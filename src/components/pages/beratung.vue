@@ -45,7 +45,7 @@
 
 <script>
   import Vue from "vue";
-  import * as beratung from '../../../content/beratung.json';
+  import * as beratung from '../../../content/beratung/beratung.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
 
   export default Vue.extend({

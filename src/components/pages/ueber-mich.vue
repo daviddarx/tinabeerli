@@ -23,7 +23,7 @@
 
 <script>
   import Vue from "vue";
-  import * as aboutme from '../../../content/uebermich.json';
+  import * as aboutme from '../../../content/uebermich/uebermich.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
 
   export default Vue.extend({
