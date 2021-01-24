@@ -4,8 +4,6 @@
     class="about"
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
   >
-    <img src="../../../static/images/tina_beerli.jpg" alt="Tina Beerli – Tina Beerli – Psychologische Beratung und Coaching" class="about__img"/>
-
     <div class="content__container">
 
       <h2 class="visually-hidden">

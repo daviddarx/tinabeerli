@@ -15,6 +15,8 @@
 
     <custom-contact></custom-contact>
 
+    <portrait></portrait>
+
     <div class="content">
       <router-view
         :key="$route.fullPath"
@@ -38,6 +40,7 @@
   import CustomFooter from './components/footer.vue';
   import CustomContact from './components/contact.vue';
   import CustomTransition from './components/transition.vue';
+  import Portrait from './components/portrait.vue';
   import BrowserWarning from './components/browser-warning.vue';
   import browserDetect from './browser-detect';
 
@@ -49,6 +52,7 @@
       'custom-footer': CustomFooter,
       'custom-contact': CustomContact,
       'custom-transition': CustomTransition,
+      'portrait': Portrait,
       'browser-warning': BrowserWarning,
     },
     data() {

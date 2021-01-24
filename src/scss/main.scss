@@ -219,21 +219,24 @@ li {
   }
 }
 
-.about {
-  &__img {
-    --s-t-left: calc(var(--s-gutter) * -1);
+.portrait {
+  --s-t-left: calc(var(--s-gutter) * -1);
 
-    position: fixed;
-    z-index: -1;
-    height: calc(50vh - var(--s-gutter));
-    right: 50%;
-    bottom: var(--s-gutter);
-    transform: translate(var(--s-t-left), calc(var(--s-page-transition-y) + 100%));
-    transition: transform var(--e-out) calc(var(--d-page-transition-y) * 1.2);
+  position: fixed;
+  z-index: -1;
+  height: calc(50vh - var(--s-gutter));
+  right: 50%;
+  bottom: var(--s-gutter);
+  opacity: 0;
+  transform: translate(var(--s-t-left), calc(var(--s-page-transition-y) + 100%));
+  transition: transform var(--e-out) calc(var(--d-page-transition-y) * 1.2), opacity ease-out 0.2s;
 
-    .is-displayed & {
-      transform: translate(var(--s-t-left), 0);
-    }
+  &.is-loaded {
+    opacity: 1;
+  }
+
+  &.is-displayed {
+    transform: translate(var(--s-t-left), 0);
   }
 }
 
