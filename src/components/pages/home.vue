@@ -34,8 +34,11 @@
     },
     mounted () {
       setTimeout(this.display, 100);
+      document.body.classList.add('home');
     },
-
+    beforeDestroy () {
+      document.body.classList.remove('home');
+    },
     methods: {
       display: function() {
         if (this.$parent.isLoaded == true) {

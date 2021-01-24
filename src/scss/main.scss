@@ -90,6 +90,10 @@ li {
   left: var(--s-gutter);
   margin-top: -0.5em;
 
+  .home & {
+    pointer-events: none;
+  }
+
   &__link {
     text-decoration: none;
   }
