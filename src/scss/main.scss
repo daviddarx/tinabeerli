@@ -60,6 +60,11 @@ strong {
 a {
   color: var(--c-text);
   text-decoration: underline;
+  transition: opacity 0.25s ease-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 li {
