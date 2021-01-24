@@ -57,7 +57,6 @@
       }
     },
     mounted () {
-      console.log(beratung);
       setTimeout(this.display, 100);
     },
 
