@@ -10,7 +10,7 @@ collections:
     label: "Home"
     create: false
     delete: false
-    folder: "content/"
+    folder: "content/home/"
     slug: "home"
     extension: "json"
     format: "json"
@@ -33,7 +33,7 @@ collections:
     label: "Beratung"
     create: false
     delete: false
-    folder: "content/"
+    folder: "content/beratung/"
     slug: "beratung"
     extension: "json"
     format: "json"
@@ -87,7 +87,7 @@ collections:
     label: "Über mich"
     create: false
     delete: false
-    folder: "content/"
+    folder: "content/uebermich/"
     slug: "uebermich"
     extension: "json"
     format: "json"
