@@ -4,7 +4,8 @@
     class="website-container"
     v-bind:class="{
       'is-ios': this.isiOS,
-      'is-android': this.isAndroid
+      'is-android': this.isAndroid,
+      'is-nav-absolute': this.isNavAbsolute
     }"
   >
     <h1 class="visually-hidden">Tina Beerli – Psychologische Beratung &amp; Coaching</h1>
@@ -61,7 +62,8 @@
         isAndroid: false,
         splashScreen: undefined,
         isLoaded: false,
-        displayAfterLoadedDelay: 500
+        isNavAbsolute: false,
+        displayAfterLoadedDelay: 500,
       }
     },
     computed: {
@@ -83,6 +85,9 @@
       this.isAndroid = browserDetect.isAndroid;
 
       this.checkIfUserTouch();
+
+      window.addEventListener('resize', this.resizeListener);
+      this.resizeListener();
     },
     methods: {
       checkIfUserTouch: function () {
@@ -94,6 +99,19 @@
         document.body.classList.add('is-touch');
         window.removeEventListener('touchstart', this.touchListener);
       },
+      resizeListener: function () {
+        const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
+        const screenRatio = width/height;
+
+        console.log(screenRatio);
+
+        if (screenRatio > 2.6) {
+          this.isNavAbsolute = true;
+        } else {
+          this.isNavAbsolute = false;
+        }
+      }
     }
   });
 </script>

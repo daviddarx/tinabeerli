@@ -94,6 +94,10 @@ li {
     pointer-events: none;
   }
 
+  .is-nav-absolute & {
+    position: absolute;
+  }
+
   &__link {
     text-decoration: none;
   }
@@ -118,6 +122,10 @@ li {
   z-index: 20;
   top: var(--s-margin-top-content);
   left: var(--s-gutter);
+
+  .is-nav-absolute & {
+    position: absolute;
+  }
 
   &__link {
     @include fontTitle;
@@ -159,6 +167,12 @@ li {
   font-size: var(--s-text-s);
   bottom: var(--s-gutter);
   left: var(--s-gutter);
+
+  .is-nav-absolute & {
+    position: absolute;
+    bottom: auto;
+    top: 90vh;
+  }
 }
 
 .content {
