@@ -10,6 +10,13 @@
         {{aboutme.title}}
       </h2>
 
+      <img
+        src="../../../static/images/tina_beerli.jpg"
+        alt="Tina Beerli – Tina Beerli – Psychologische Beratung und Coaching"
+        class="content__portrait"
+        ref="image"
+      />
+
       <div
         class="content__md"
         v-html="getHTMLfromMD(aboutme.content)"

@@ -2,6 +2,10 @@
 <template>
   <nav
     class="navigation"
+    v-bind:class="{
+      'is-mobile' : this.isMobile,
+      'is-mobile-displayed': this.isMobileDisplayed
+    }"
   >
     <h2 class="visually-hidden">Navigation</h2>
     <div
@@ -32,6 +36,25 @@
           Über mich
         </span>
       </router-link>
+
+      <div class="navigation__contact">
+        +41 79 614 26 18<br>
+        <a href="mailto:hallo@tinabeerli.ch" target="_blank">hallo@tinabeerli.ch</a>
+      </div>
+    </div>
+
+    <div
+      class="navigation__burger"
+      v-on:click="displayMobileNavigation"
+    >
+      <div class="navigation__burger-line"></div>
+      <div class="navigation__burger-bg"></div>
+    </div>
+
+    <div
+      class="navigation__bg"
+      v-on:click="closeMobileNavigation"
+    >
     </div>
   </nav>
 
@@ -44,14 +67,50 @@
     data() {
       return {
         isDisplayed: false,
+        isMobile: false,
+        isMobileDisplayed: false,
+        isMobileStep: 850
       }
     },
     mounted () {
       requestAnimationFrame(this.displayNav);
+
+      window.addEventListener('resize', this.resizeLister);
+      this.resizeLister();
+
+      this.$router.beforeEach((to, from, next) => {
+        this.closeMobileNavigation();
+        next();
+      });
     },
     methods: {
       displayNav: function () {
         this.isDisplayed = true;
+      },
+      resizeLister: function () {
+        const windowW = window.innerWidth || document.documentElement.clientWidth ||
+document.body.clientWidth;
+
+        if (windowW <= this.isMobileStep && this.isMobile == false) {
+          this.setMobileNavigation();
+        } else if (windowW > this.isMobileStep && this.isMobile == true) {
+          this.resetMobileNavigation();
+        }
+      },
+      setMobileNavigation: function() {
+        this.isMobile = true;
+      },
+      resetMobileNavigation: function () {
+        this.isMobile = false;
+        this.isMobileDisplayed = false;
+      },
+      displayMobileNavigation: function () {
+        this.isMobileDisplayed = !this.isMobileDisplayed;
+      },
+      closeMobileNavigation: function () {
+        if (this.isMobileDisplayed == true) {
+          this.isMobileDisplayed = false;
+        }
       }
     }
   });

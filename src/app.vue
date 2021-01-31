@@ -14,8 +14,6 @@
 
     <custom-navigation ref="nav"></custom-navigation>
 
-    <custom-contact></custom-contact>
-
     <portrait></portrait>
 
     <div class="content">
@@ -27,6 +25,8 @@
 
       <custom-footer></custom-footer>
     </div>
+
+    <custom-contact></custom-contact>
 
     <custom-transition></custom-transition>
 
@@ -104,9 +104,7 @@
         const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
         const screenRatio = width/height;
 
-        console.log(screenRatio);
-
-        if (screenRatio > 2.6) {
+        if (screenRatio > 2.6 && windowW > this.$refs.nav.isMobileStep) {
           this.isNavAbsolute = true;
         } else {
           this.isNavAbsolute = false;
