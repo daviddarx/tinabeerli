@@ -23,6 +23,8 @@
       >
       </router-view>
 
+      <custom-contact class="contact--mobile"></custom-contact>
+
       <custom-footer></custom-footer>
     </div>
 

@@ -1,6 +1,10 @@
 
 <template>
   <div class="contact">
+    <span class="contact__address">
+      Praxis Lutherhof<br>
+      Lutherstrasse 6, 8004 Zürich<br><br>
+    </span>
     +41 79 614 26 18<br>
     <a href="mailto:hallo@tinabeerli.ch" target="_blank">hallo@tinabeerli.ch</a>
   </div>

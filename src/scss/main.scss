@@ -95,6 +95,9 @@ li {
   @include viewport('mobile-layout') {
     position: relative;
     top: auto;
+    left: auto;
+    padding-left: var(--s-gutter);
+    padding-right: var(--s-gutter);
     margin-top: calc(var(--s-gutter) - 0.6em);
     margin-bottom: calc(var(--s-gutter) * 2);
   }
@@ -410,6 +413,10 @@ li {
   dl {
     display: flex;
     flex-wrap: wrap;
+
+    @include viewport('mobile-l') {
+      display: block;
+    }
   }
 
   dt {
@@ -418,6 +425,10 @@ li {
 
   dd {
     flex-basis: 40%;
+
+    @include viewport('mobile-l') {
+      margin-bottom: 0.5em;
+    }
 
     p {
       margin: 0;
@@ -464,8 +475,20 @@ li {
   }
 
   @include viewport('mobile-layout') {
+    display: none;
+  }
+
+  &--mobile {
     position: relative;
-    transform: translateY(-7em);
+    left: auto;
+    display: block;
+    margin-top: calc(var(--s-gutter) * 4);
+  }
+
+  &__address {
+    @media (min-aspect-ratio: 11/5) {
+      display: none;
+    }
   }
 }
 
@@ -474,7 +497,7 @@ li {
   margin-top: calc(var(--s-gutter) * 2);
 
   @include viewport('mobile-layout') {
-    margin-top: 15em;
+    margin-top: calc(var(--s-gutter) * 2);
   }
 }
 
