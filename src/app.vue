@@ -103,8 +103,7 @@
         const width  = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
         const height = window.innerHeight|| document.documentElement.clientHeight|| document.body.clientHeight;
         const screenRatio = width/height;
-
-        if (screenRatio > 2.6 && windowW > this.$refs.nav.isMobileStep) {
+        if (screenRatio > 2.6 && width > this.$refs.nav.isMobileStep) {
           this.isNavAbsolute = true;
         } else {
           this.isNavAbsolute = false;
