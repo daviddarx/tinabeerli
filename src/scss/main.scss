@@ -87,7 +87,7 @@ li {
 
 .logo {
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   top: var(--s-gutter);
   left: var(--s-gutter);
   margin-top: -0.5em;
@@ -448,7 +448,7 @@ li {
 
 .contact {
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   font-size: var(--s-text-s);
   bottom: var(--s-gutter);
   left: var(--s-gutter);
