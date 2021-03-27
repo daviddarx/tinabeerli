@@ -396,6 +396,10 @@ li {
 
   p {
     margin-bottom: var(--s-margin-bottom-p);
+
+    @include viewport('mobile-l') {
+      @include hyphens();
+    }
   }
 
   ul,
