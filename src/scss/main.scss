@@ -501,6 +501,37 @@ li {
   }
 }
 
+.background-decoration {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  transition: opacity var(--e-inout) 1s;
+
+  &.is-faded {
+    opacity: 0.2;
+  }
+
+  .consulting & {
+    // top: -13vh;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100vw;
+    opacity: 0;
+    transition: opacity linear 0.5s;
+
+    &.is-loaded {
+      opacity: 1;
+    }
+
+    &.is-hidden {
+      visibility: hidden;
+    }
+  }
+}
+
 .transition {
   &__bg--in,
   &__bg--out {

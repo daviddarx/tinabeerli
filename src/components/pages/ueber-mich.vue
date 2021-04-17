@@ -5,7 +5,6 @@
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
   >
     <div class="content__container">
-
       <h2 class="visually-hidden">
         {{aboutme.title}}
       </h2>
@@ -23,6 +22,12 @@
       >
       </div>
     </div>
+    <background-decoration
+      ref="bgDeco"
+      v-bind:image1URL="'/images/faden/faden_03_1.jpg'"
+      v-bind:image2URL="'/images/faden/faden_03_2.jpg'"
+    >
+    </background-decoration>
   </div>
 </template>
 
@@ -30,8 +35,12 @@
   import Vue from "vue";
   import * as aboutme from '../../../content/uebermich/uebermich.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
+  import BackgroundDecoration from '../background-decoration.vue';
 
   export default Vue.extend({
+    components: {
+      'background-decoration': BackgroundDecoration
+    },
     mixins: [getHTMLfromMDMixin],
     data() {
       return {
@@ -42,7 +51,9 @@
     mounted () {
       setTimeout(this.display, 100);
     },
-
+    beforeDestroy () {
+      this.$refs.bgDeco.destroy();
+    },
     methods: {
       display: function() {
         if (this.$parent.isLoaded == true) {
