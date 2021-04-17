@@ -41,7 +41,7 @@
     <background-decoration
       ref="bgDeco"
       v-bind:image1URL="'/images/faden/faden_02_1.jpg'"
-      v-bind:image2URL="'/images/faden/faden_02_3.jpg'"
+      v-bind:image2URL="'/images/faden/faden_02_2.jpg'"
     >
     </background-decoration>
   </div>
