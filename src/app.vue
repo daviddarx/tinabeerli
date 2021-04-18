@@ -31,8 +31,6 @@
     <custom-contact></custom-contact>
 
     <custom-transition></custom-transition>
-
-    <browser-warning></browser-warning>
   </div>
 </template>
 
@@ -44,7 +42,6 @@
   import CustomContact from './components/contact.vue';
   import CustomTransition from './components/transition.vue';
   import Portrait from './components/portrait.vue';
-  import BrowserWarning from './components/browser-warning.vue';
   import browserDetect from './browser-detect';
 
 
