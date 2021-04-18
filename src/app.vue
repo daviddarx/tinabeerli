@@ -53,7 +53,6 @@
       'custom-contact': CustomContact,
       'custom-transition': CustomTransition,
       'portrait': Portrait,
-      'browser-warning': BrowserWarning,
     },
     data() {
       return {
