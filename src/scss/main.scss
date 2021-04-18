@@ -482,13 +482,25 @@ li {
   &--mobile {
     position: relative;
     left: auto;
-    display: block;
+    display: none;
     margin-top: calc(var(--s-gutter) * 4);
+
+    @include viewport('mobile-layout') {
+      display: block;
+    }
+
+    @media (min-aspect-ratio: 11/5) {
+      display: block;
+    }
   }
 
   &__address {
     @media (min-aspect-ratio: 11/5) {
       display: none;
+
+      .contact--mobile & {
+        display: block;
+      }
     }
   }
 }
