@@ -552,7 +552,19 @@ li {
   transition: opacity var(--e-inout) 1s;
 
   @include viewport('mobile-layout') {
-    margin-top: calc(var(--s-gutter) * 10);
+    top: 12vh;
+  }
+
+  @include viewport('mobile-l') {
+    top: 40vw;
+  }
+
+  @include viewport('mobile') {
+    top: 55vw;
+  }
+
+  @include viewport('mobile-s') {
+    top: 65vw;
   }
 
   &.is-faded {
