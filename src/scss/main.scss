@@ -136,6 +136,9 @@ li {
 
 .navigation {
   --d-mobile: 0.6s;
+  --d-mobile-link-out: 0.3s;
+  --d-mobile-link-in: 0.75s;
+  $delay: 0.1;
 
   &__container {
     position: fixed;
@@ -176,6 +179,21 @@ li {
 
     .is-mobile & {
       color: var(--c-bg);
+      opacity: 0;
+      transform: translateY(calc(var(--s-gutter) * 2));
+      transition: opacity linear var(--d-mobile-link-out), transform var(--e-out) var(--d-mobile-link-out) var(--d-mobile-link-out);
+    }
+
+    .is-mobile-displayed & {
+      @for $i from 1 through 3 {
+        &:nth-child(#{$i}n) {
+          transition-delay: #{$i * $delay}s;
+        }
+      }
+
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity linear var(--d-mobile-link-in), transform var(--e-out) var(--d-mobile-link-in);
     }
   }
 
@@ -226,6 +244,16 @@ li {
 
     .is-mobile & {
       display: block;
+      opacity: 0;
+      transform: translateY(calc(var(--s-gutter) * 2));
+      transition: opacity linear var(--d-mobile-link-out), transform var(--e-out) var(--d-mobile-link-out) var(--d-mobile-link-out);
+    }
+
+    .is-mobile-displayed & {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity linear var(--d-mobile-link-in), transform var(--e-out) var(--d-mobile-link-in);
+      transition-delay: $delay * 10s;
     }
   }
 
