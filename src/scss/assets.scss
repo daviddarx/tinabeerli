@@ -102,7 +102,7 @@ $breakpoints: (
   }
 
   @include viewport('mobile-l') {
-    --s-text: 7.5rem;
+    --s-text: 6rem;
   }
 
   @include viewport('mobile') {
