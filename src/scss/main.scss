@@ -563,10 +563,6 @@ li {
     top: 55vw;
   }
 
-  @include viewport('mobile-s') {
-    top: 65vw;
-  }
-
   &.is-faded {
     opacity: 0.2;
   }
