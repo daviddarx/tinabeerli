@@ -12,6 +12,8 @@
 
     <logo></logo>
 
+    <browser-warning></browser-warning>
+
     <custom-navigation ref="nav"></custom-navigation>
 
     <portrait></portrait>
@@ -31,6 +33,7 @@
     <custom-contact></custom-contact>
 
     <custom-transition></custom-transition>
+
   </div>
 </template>
 
@@ -43,6 +46,7 @@
   import CustomTransition from './components/transition.vue';
   import Portrait from './components/portrait.vue';
   import browserDetect from './browser-detect';
+  import BrowserWarning from './components/browser-warning.vue';
 
 
   export default Vue.extend({
@@ -53,6 +57,7 @@
       'custom-contact': CustomContact,
       'custom-transition': CustomTransition,
       'portrait': Portrait,
+      'browser-warning': BrowserWarning
     },
     data() {
       return {

@@ -623,3 +623,42 @@ li {
 .transition-out-enter {
   opacity: 1;
 }
+
+.browser-warning {
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: var(--s-gutter);
+  background-color: var(--c-bg);
+
+  &::before {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: var(--c-bg);
+    z-index: -1;
+  }
+
+  &__infos {
+    padding-top: calc(var(--s-gutter) * 2);
+  }
+
+  .logo {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+
+    @include viewport('mobile-layout') {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
