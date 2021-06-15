@@ -29,6 +29,29 @@ collections:
           - heading-three
           - bulleted-list
 
+  - name: "home_fr"
+    label: "Home FR"
+    create: false
+    delete: false
+    folder: "content/home/"
+    slug: "home_fr"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "markdown"
+        buttons:
+          - bold
+          - link
+          - heading-three
+          - bulleted-list
+
   - name: "beratung_de"
     label: "Beratung DE"
     create: false
@@ -83,12 +106,89 @@ collections:
                     - bold
                     - link
 
+  - name: "beratung_fr"
+    label: "Beratung FR"
+    create: false
+    delete: false
+    folder: "content/beratung/"
+    slug: "beratung_fr"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Text Content"
+            name: "textcontent"
+            required: false
+            widget: "markdown"
+            buttons:
+              - bold
+              - link
+              - heading-three
+              - bulleted-list
+          - label: "List Content"
+            name: "listcontent"
+            widget: "list"
+            required: false
+            fields:
+              - label: "Definition List"
+                name: "definitionlist"
+                widget: "object"
+                required: false
+                fields:
+                  - label: "Title"
+                    name: "title"
+                    widget: "string"
+                    required: false
+
+                  - label: "Description"
+                    name: "desc"
+                    widget: "markdown"
+                    required: false
+                    buttons:
+                    - bold
+                    - link
+
   - name: "uebermich_de"
     label: "Über mich DE"
     create: false
     delete: false
     folder: "content/uebermich/"
     slug: "uebermich_de"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "markdown"
+        buttons:
+          - bold
+          - link
+          - heading-three
+          - bulleted-list
+
+  - name: "uebermich_fr"
+    label: "Über mich FR"
+    create: false
+    delete: false
+    folder: "content/uebermich/"
+    slug: "uebermich_fr"
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"
