@@ -26,7 +26,7 @@
 
 <script>
   import Vue from "vue";
-  import * as home from '../../../content/home/home_de.json';
+  import * as home from '../../../content/home_de/home_de.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
   import BackgroundDecoration from '../background-decoration.vue';
 
