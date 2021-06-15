@@ -186,6 +186,7 @@ li {
     .is-mobile & {
       color: var(--c-bg);
       opacity: 0;
+      margin-top: 0.3em;
       transform: translateY(calc(var(--s-gutter) * 2));
       transition: opacity linear var(--d-mobile-link-out), transform var(--e-out) var(--d-mobile-link-out) var(--d-mobile-link-out);
     }
