@@ -6,12 +6,12 @@ media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "home"
-    label: "Home"
+  - name: "home_de"
+    label: "Home DE"
     create: false
     delete: false
     folder: "content/home/"
-    slug: "home"
+    slug: "home_de"
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"
@@ -29,12 +29,12 @@ collections:
           - heading-three
           - bulleted-list
 
-  - name: "beratung"
-    label: "Beratung"
+  - name: "beratung_de"
+    label: "Beratung DE"
     create: false
     delete: false
     folder: "content/beratung/"
-    slug: "beratung"
+    slug: "beratung_de"
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"
@@ -83,12 +83,12 @@ collections:
                     - bold
                     - link
 
-  - name: "uebermich"
-    label: "Über mich"
+  - name: "uebermich_de"
+    label: "Über mich DE"
     create: false
     delete: false
     folder: "content/uebermich/"
-    slug: "uebermich"
+    slug: "uebermich_de"
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"

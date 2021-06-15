@@ -49,7 +49,7 @@
 
 <script>
   import Vue from "vue";
-  import * as beratung from '../../../content/beratung/beratung.json';
+  import * as beratung from '../../../content/beratung/beratung_de.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
   import BackgroundDecoration from '../background-decoration.vue';
 
