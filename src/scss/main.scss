@@ -484,6 +484,11 @@ li {
     transform: translate(var(--s-t-left), 0);
   }
 
+  @include viewport('vertical') {
+    height: calc(50vh - var(--s-gutter) * 4);
+    bottom: calc(var(--s-gutter) * 4);
+  }
+
   @include viewport('mobile-layout') {
     display: none;
   }
