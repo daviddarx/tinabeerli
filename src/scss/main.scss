@@ -155,7 +155,7 @@ li {
       box-sizing: border-box;
       padding: var(--s-gutter);
       background-color: var(--c-text);
-      max-width: 300px;
+      max-width: 320px;
       transform: translateX(100%);
       transition: transform var(--e-inout) var(--d-mobile);
     }
@@ -167,6 +167,12 @@ li {
 
     .is-nav-absolute & {
       position: absolute;
+    }
+  }
+
+  &__links {
+    .is-mobile & {
+      padding-top: calc(var(--s-gutter) * 4);
     }
   }
 
@@ -254,6 +260,18 @@ li {
       transform: translateY(0);
       transition: opacity linear var(--d-mobile-link-in), transform var(--e-out) var(--d-mobile-link-in);
       transition-delay: $delay * 10s;
+    }
+  }
+
+  &__languages {
+    position: fixed;
+    top: var(--s-gutter);
+    right: var(--s-gutter);
+
+    .is-mobile & {
+      position: absolute;
+      top: var(--s-gutter);
+      left: var(--s-gutter);
     }
   }
 
@@ -369,6 +387,45 @@ li {
       visibility: visible;
       transition-delay: 0s, 0s;
       opacity: 0.75;
+    }
+  }
+}
+
+.language-link {
+  @include fontTitle();
+
+  --s-dim: 2.5em;
+
+  display: inline-block;
+  font-size: var(--s-text-s);
+  text-transform: uppercase;
+  text-decoration: none;
+  width: var(--s-dim);
+  height: var(--s-dim);
+  text-align: center;
+  line-height: calc(var(--s-dim) * 0.95);
+  margin-right: 0.5em;
+  box-sizing: border-box;
+  border-radius: 100%;
+  border: 1px solid var(--c-text);
+  background-color: var(--c-bg);
+
+  .is-mobile & {
+    --s-dim: 3em;
+
+    color: var(--c-bg);
+    background-color: var(--c-text);
+    border-color: var(--c-bg);
+  }
+
+  &.is-active {
+    color: var(--c-bg);
+    background-color: var(--c-text);
+    pointer-events: none;
+
+    .is-mobile & {
+      color: var(--c-text);
+      background-color: var(--c-bg);
     }
   }
 }

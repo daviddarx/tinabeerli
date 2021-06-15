@@ -12,30 +12,32 @@
       class="navigation__container"
       v-if="this.isDisplayed"
     >
-      <router-link
-        class="navigation__link"
-        to="/home"
-      >
-        <span class="navigation__el">
-          Home
-        </span>
-      </router-link>
-      <router-link
-        class="navigation__link"
-        to="/beratung"
-      >
-        <span class="navigation__el">
-          Beratung
-        </span>
-      </router-link>
-      <router-link
-        class="navigation__link"
-        to="/ueber-mich"
-      >
-        <span class="navigation__el">
-          Über mich
-        </span>
-      </router-link>
+      <div class="navigation__links">
+        <router-link
+          class="navigation__link"
+          to="/home"
+        >
+          <span class="navigation__el">
+            Home
+          </span>
+        </router-link>
+        <router-link
+          class="navigation__link"
+          to="/beratung"
+        >
+          <span class="navigation__el">
+            Beratung
+          </span>
+        </router-link>
+        <router-link
+          class="navigation__link"
+          to="/ueber-mich"
+        >
+          <span class="navigation__el">
+            Über mich
+          </span>
+        </router-link>
+      </div>
 
       <div class="navigation__contact">
         <span class="contact__address">
@@ -44,6 +46,11 @@
         </span>
         +41 79 614 26 18<br>
         <a href="mailto:kontakt@tinabeerli.ch" target="_blank">kontakt@tinabeerli.ch</a>
+      </div>
+
+      <div class="navigation__languages">
+        <a href="#de" class="language-link is-active">DE</a>
+        <a href="#fr" class="language-link">FR</a>
       </div>
     </div>
 
