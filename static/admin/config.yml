@@ -10,7 +10,7 @@ collections:
     label: "Home DE"
     create: false
     delete: false
-    folder: "content/home/"
+    folder: "content/home_de/"
     slug: "home_de"
     extension: "json"
     format: "json"
@@ -33,7 +33,7 @@ collections:
     label: "Home FR"
     create: false
     delete: false
-    folder: "content/home/"
+    folder: "content/home_fr/"
     slug: "home_fr"
     extension: "json"
     format: "json"
@@ -56,7 +56,7 @@ collections:
     label: "Beratung DE"
     create: false
     delete: false
-    folder: "content/beratung/"
+    folder: "content/beratung_de/"
     slug: "beratung_de"
     extension: "json"
     format: "json"
@@ -110,7 +110,7 @@ collections:
     label: "Beratung FR"
     create: false
     delete: false
-    folder: "content/beratung/"
+    folder: "content/beratung_fr/"
     slug: "beratung_fr"
     extension: "json"
     format: "json"
@@ -164,7 +164,7 @@ collections:
     label: "Über mich DE"
     create: false
     delete: false
-    folder: "content/uebermich/"
+    folder: "content/uebermich_de/"
     slug: "uebermich_de"
     extension: "json"
     format: "json"
@@ -187,7 +187,7 @@ collections:
     label: "Über mich FR"
     create: false
     delete: false
-    folder: "content/uebermich/"
+    folder: "content/uebermich_fr/"
     slug: "uebermich_fr"
     extension: "json"
     format: "json"

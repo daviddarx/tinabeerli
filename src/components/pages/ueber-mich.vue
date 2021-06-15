@@ -33,7 +33,7 @@
 
 <script>
   import Vue from "vue";
-  import * as aboutme from '../../../content/uebermich/uebermich_de.json';
+  import * as aboutme from '../../../content/uebermich_de/uebermich_de.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
   import BackgroundDecoration from '../background-decoration.vue';
 
