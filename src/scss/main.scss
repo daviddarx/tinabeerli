@@ -614,6 +614,10 @@ li {
   overflow: hidden;
   transition: opacity var(--e-inout) 1s;
 
+  @include viewport('vertical') {
+    top: 10vh;
+  }
+
   @include viewport('mobile-layout') {
     top: 12vh;
   }
