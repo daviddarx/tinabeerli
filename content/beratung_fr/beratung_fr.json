@@ -1,29 +1,29 @@
 {
-  "title": "Beratung",
+  "title": "Consultation",
   "content": [
     {
       "title": "p1",
-      "textcontent": "Meine Beratung ist ziel-, lösungs- und ressourcen&shy;orientiert. Sie richtet sich nach dem Machbaren aus und versucht gleichzeitig achtsam das Wünschens&shy;werte mit einzubeziehen.\n\nVernetztes, ganzheitliches und inklusives Denken ist für mich wichtig, um den Bedürfnissen meines Ge&shy;genübers so gerecht wie möglich zu werden. Der Re&shy;spekt gegenüber Werten und Haltungen anderer ist für mich dabei eine Grundhaltung.\n\n### Themen\n\n* Beziehung\n* Partnerschaft\n* Beziehungsmuster / Beziehungskonflikte\n* Zusammenbleiben / Trennung \n* Elternschaft\n* Familien\n* Patchworkfamilien\n* Co-Parenting\n* Erziehung\n* Pubertät\n* Monogamie / Polyamorie\n* Alternative Beziehungsformen\n* Sexualität\n* Identität / Identitätsfindung\n* Sexuelle Orientierung\n* LBTQI\n\nIch arbeite integrativ mit einer sexpositiven Haltung und lege Wert auf individuell zugeschnittene Heran&shy;gehensweisen. Entsprechend meiner Aus- und Wei&shy;terbildungen liegt die Basis meines Vor&shy;gehens im systemischen Ansatz. Neben der systemischen Be&shy;ratung integriere ich Methoden aus der Hypno&shy;systemik, aus der Sexualtherapie oder arbeite mit Aufstellungs&shy;techniken.\n\n### Sprachen\n\nIch biete meine Beratung in Deutsch und Französisch an.\n\n### Angebot & Tarife"
+      "textcontent": "Mes conseils sont axés sur les objectifs, les solutions et les ressources. Elle se fonde sur ce qui est faisable et en même temps essaie soigneusement d'inclure ce qui est souhaitable.\n\nLa pensée en réseau, holistique et inclusive est importante pour moi afin de répondre le plus possible aux besoins de mon homologue. Pour moi, le respect des valeurs et des attitudes des autres est une attitude de base.\n\n### Sujets\n\n* Relation\n* Partenariat\n* Modèles relationnels / conflits relationnels\n* Rester ensemble / séparation \n* Parentalité\n* Familles\n* Familles recomposées\n* Coparentalité\n* Éducation\n* Puberté\n* Monogamie / polyamour\n* Formes alternatives de relation\n* Sexualité\n* Identité / Recherche d'identité\n* Orientation sexuelle\n* LBTQI\n\nJe travaille de manière intégrative avec une attitude sexuellement positive et valorise les approches personnalisées. En accord avec ma formation et ma formation continue, la base de mon approche est une approche systémique. En plus du conseil systémique, j'intègre des méthodes issues de l'hypnosystème, de la sexothérapie ou travaille avec des techniques de constellation.\n\n### Langues\n\nJe propose mes conseils en allemand et en français.\n\n### Offre & tarifs"
     },
     {
       "title": "p2",
       "listcontent": [
         {
           "definitionlist": {
-            "title": "Einzelpersonen:",
-            "desc": "150.- CHF/St."
+            "title": "Personnes:",
+            "desc": "150.- CHF/h."
           }
         },
         {
           "definitionlist": {
-            "title": "Paare:",
-            "desc": "170.- CHF/St."
+            "title": "Couples:",
+            "desc": "170.- CHF/h."
           }
         },
         {
           "definitionlist": {
-            "title": "Mehrpersonen / Familien:",
-            "desc": "190.- CHF/St."
+            "title": "Multi-personnes / Familles:",
+            "desc": "190.- CHF/h."
           }
         }
       ],
@@ -31,7 +31,7 @@
     },
     {
       "title": "p3",
-      "textcontent": "Die Kosten werden nicht von der Krankenkasse übernommen. Nach Absprache ist eine Anpassung entsprechend Ihren finanziellen Verhältnissen möglich."
+      "textcontent": "Les frais ne sont pas pris en charge par l'assurance maladie. Un ajustement en fonction de votre situation financière est possible après consultation."
     }
   ]
 }
