@@ -49,9 +49,11 @@
 
 <script>
   import Vue from "vue";
-  import * as beratung from '../../../content/beratung_de/beratung_de.json';
+  import * as beratungDE from '../../../content/beratung_de/beratung_de.json';
+  import * as beratungFR from '../../../content/beratung_fr/beratung_fr.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
   import BackgroundDecoration from '../background-decoration.vue';
+  import { i18n } from "../../index.js";
 
   export default Vue.extend({
     components: {
@@ -60,7 +62,7 @@
     mixins: [getHTMLfromMDMixin],
     data() {
       return {
-        beratung: beratung,
+        beratung: (i18n.locale =='de') ? beratungDE : beratungFR,
         isDisplayed : false,
       }
     },
@@ -72,7 +74,7 @@
     },
     methods: {
       display: function() {
-        if (this.$parent.isLoaded == true) {
+        if (this.$parent.$parent.isLoaded == true) {
           this.isDisplayed = true;
         }
       }

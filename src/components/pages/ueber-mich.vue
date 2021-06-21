@@ -33,9 +33,11 @@
 
 <script>
   import Vue from "vue";
-  import * as aboutme from '../../../content/uebermich_de/uebermich_de.json';
+  import * as aboutmeDE from '../../../content/uebermich_de/uebermich_de.json';
+  import * as aboutmeFR from '../../../content/uebermich_fr/uebermich_fr.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
   import BackgroundDecoration from '../background-decoration.vue';
+  import { i18n } from "../../index.js";
 
   export default Vue.extend({
     components: {
@@ -44,7 +46,7 @@
     mixins: [getHTMLfromMDMixin],
     data() {
       return {
-        aboutme: aboutme,
+        aboutme: (i18n.locale =='de') ? aboutmeDE : aboutmeFR,
         isDisplayed : false,
       }
     },
@@ -56,7 +58,7 @@
     },
     methods: {
       display: function() {
-        if (this.$parent.isLoaded == true) {
+        if (this.$parent.$parent.isLoaded == true) {
           this.isDisplayed = true;
         }
       }

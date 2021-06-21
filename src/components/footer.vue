@@ -3,7 +3,7 @@
   <div class="footer">
     ©2021 Tina Beerli –
     <router-link
-        to="/impressum"
+        :to="'/' + $i18n.locale + '/impressum'"
       >
         Impressum
     </router-link>

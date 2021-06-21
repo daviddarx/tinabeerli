@@ -1,6 +1,12 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import routes from './routes';
+import RouterView from "./components/router-view.vue";
+import Home from './components/pages/home.vue';
+import Beratung from './components/pages/beratung.vue';
+import Uebermich from './components/pages/ueber-mich.vue';
+import Impressum from './components/pages/impressum.vue';
+
+import { i18n } from "./index.js";
 
 Vue.use(VueRouter);
 
@@ -18,10 +24,57 @@ const scrollBehavior = (to, from, savedPosition) => {
 }
 
 const router = new VueRouter({
-  routes,
+  routes: [
+    {
+      path: "/:lang",
+      component: RouterView,
+      beforeEnter(to, from, next) {
+        const lang = to.params.lang;
+        if (!["de", "fr"].includes(lang)) return next("de");
+        if (i18n.locale !== lang) {
+          i18n.locale = lang;
+        }
+        return next();
+      },
+      children: [
+        {
+          label: 'Home',
+          path: "home",
+          name: "home",
+          component: Home,
+          meta: { pageTitle: 'Home' }
+        },
+        {
+          label: 'Beratung',
+          path: 'beratung',
+          name: 'beratung',
+          component: Beratung,
+          meta: { pageTitle: 'Beratung' }
+        },
+        {
+          label: 'Über mich',
+          path: "ueber-mich",
+          name: "ueber-mich",
+          component: Uebermich,
+          meta: { pageTitle: 'Über mich' }
+        },
+        {
+          label: 'Impressum',
+          path: "impressum",
+          name: "impressum",
+          component: Impressum,
+          meta: { pageTitle: 'Impressum' }
+        }
+      ]
+    },
+    {
+      path: "*",
+      redirect: "/de/home"
+    }
+  ],
   scrollBehavior,
   mode: 'history',
-  base: '/',
+  base: process.env.BASE_URL,
   linkActiveClass: 'is-current',
 });
 

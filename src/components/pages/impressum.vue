@@ -5,83 +5,39 @@
     v-bind:class="{ 'is-displayed': this.isDisplayed }"
   >
     <div class="content__container">
-
       <h2 class="visually-hidden">
-        Impressum
+        {{impressum.title}}
       </h2>
-
-      <h3 class="no-margin-top">
-        Kontaktadresse
-      </h3>
-
-      <p>
-        Tina Beerli<br>
-        Psychologische Beratung &amp; Coaching<br>
-        Albisriederstrasse 100<br>
-        8003 Zürich
-      </p>
-
-      <p>
-        +41 79 614 26 18<br>
-        <a href="mailto:kontakt@tinabeerli.ch" target="_blank">kontakt@tinabeerli.ch</a>
-      </p>
-
-      <h3>
-        Haftungsausschluss
-      </h3>
-
-      <p>
-        Der Webseitenbetreiber übernimmt keine Gewähr bezüglich der inhaltlichen Korrektheit, Exaktheit, Aktualität, Vollständigkeit oder Zuverlässigkeit der veröffentlichten Informationen.
-      </p>
-
-      <p>
-        Haftungsansprüche gegen den Webseitenbetreiber wegen materieller oder immaterieller Schäden jeglicher Art, welche aus dem Besuch, der Nutzung oder auch Nichtnutzung der zur Verfügung gestellten Daten, durch einen falschen Gebrauch der Internetverbindung oder durch eventuelle technische Fehler entstanden sind, werden ausgeschlossen.
-      </p>
-
-      <p>
-        Alle veröffentlichten Angebote haben einen unverbindlichen Charakter. Der Webseitenbetreiber hat das Recht, Teile von Webseiten oder auch den gesamten Inhalt ohne vorherige Ankündigung zu ändern, zu ergänzen, zu löschen oder die Publikation teilweise oder komplett einzustellen.
-      </p>
-
-      <h3>
-        Haftung für Links
-      </h3>
-
-      <p>
-        Links auf Webseiten von Drittanbietern, sowie Verweise darauf, liegen außerhalb des Verantwortungsbereichs des Webseitenbetreibers. Jegliche Verantwortung für die Inhalte dieser Webseiten wird abgelehnt. Wer auf Links von Drittanbietern zugreift, diese besucht oder nutzt, tut dies auf eigene Gefahr.
-      </p>
-
-      <h3>
-        Urheberrechte
-      </h3>
-
-      <p>
-        Das Urheberrecht sowie alle anderen Rechte an Texten, Bildern, Fotos oder Dateien auf der Webseite gehören ausschließlich den Webseitenbetreiber oder den angeführten Rechteinhabern. Die Reproduktion von Elementen bedarf der schriftlichen Zustimmung der Urheberrechtsträger.
-      </p>
-
-      <p>
-        Diese Impressum wurde erstellt mit <a href="https://impressumgeneratorschweiz.de/" target="_blank">impressumgeneratorschweiz.de</a>.
-      </p>
-
+      <div
+        class="content__md"
+        v-html="getHTMLfromMD(impressum.content)"
+      >
+      </div>
     </div>
   </div>
 </template>
 
 <script>
   import Vue from "vue";
+  import * as impressumDE from '../../../content/impressum_de/impressum_de.json';
+  import * as impressumFR from '../../../content/impressum_fr/impressum_fr.json';
+  import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
+  import { i18n } from "../../index.js";
 
   export default Vue.extend({
+    mixins: [getHTMLfromMDMixin],
     data() {
       return {
+        impressum: (i18n.locale =='de') ? impressumDE : impressumFR,
         isDisplayed : false,
       }
     },
     mounted () {
       setTimeout(this.display, 100);
     },
-
     methods: {
       display: function() {
-        if (this.$parent.isLoaded == true) {
+        if (this.$parent.$parent.isLoaded == true) {
           this.isDisplayed = true;
         }
       }

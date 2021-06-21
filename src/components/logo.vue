@@ -8,13 +8,15 @@
     >
       <router-link
         class="logo__link"
-        to="/"
+        :to="'/' + $i18n.locale + '/home'"
       >
         <p class="logo__name">
           Tina Beerli
         </p>
-        <p class="logo__subline">
-          Psychologische Beratung &amp; Coaching
+        <p
+          v-html="$t('app.logoSubline')"
+          class="logo__subline"
+        >
         </p>
       </router-link>
     </div>

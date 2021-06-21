@@ -78,10 +78,6 @@
         this.isLoaded = true;
 
         this.splashScreen.classList.add('hidden');
-
-        setTimeout(() => {
-          this.$refs.view.display();
-        }, this.displayAfterLoadedDelay);
       });
 
       this.isiOS = browserDetect.isiOS;

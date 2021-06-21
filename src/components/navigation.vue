@@ -15,26 +15,26 @@
       <div class="navigation__links">
         <router-link
           class="navigation__link"
-          to="/home"
+          :to="'/' + $i18n.locale + '/home'"
         >
           <span class="navigation__el">
-            Home
+            {{$t('nav.home')}}
           </span>
         </router-link>
         <router-link
           class="navigation__link"
-          to="/beratung"
+          :to="'/' + $i18n.locale + '/beratung'"
         >
           <span class="navigation__el">
-            Beratung
+            {{$t('nav.consultation')}}
           </span>
         </router-link>
         <router-link
           class="navigation__link"
-          to="/ueber-mich"
+          :to="'/' + $i18n.locale + '/ueber-mich'"
         >
           <span class="navigation__el">
-            Über mich
+            {{$t('nav.about')}}
           </span>
         </router-link>
       </div>
@@ -49,8 +49,20 @@
       </div>
 
       <div class="navigation__languages">
-        <a href="#de" class="language-link is-active">DE</a>
-        <a href="#fr" class="language-link">FR</a>
+        <a
+          class="language-link"
+          :class="{'is-active' : this.$route.params.lang=='de'}"
+          :href="'/de/' + this.$route.name"
+        >
+          DE
+        </a>
+        <a
+          class="language-link"
+          :class="{'is-active' : this.$route.params.lang=='fr'}"
+          :href="'/fr/' + this.$route.name"
+        >
+          FR
+        </a>
       </div>
     </div>
 
