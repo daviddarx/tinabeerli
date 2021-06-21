@@ -481,10 +481,18 @@ li {
     &.no-margin-top {
       margin-top: 0;
     }
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   p {
-    margin-bottom: var(--s-margin-bottom-p);
+    margin-top: var(--s-margin-bottom-p);
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     @include viewport('mobile-l') {
       @include hyphens();
