@@ -50,14 +50,14 @@
 
       <div class="navigation__languages">
         <a
-          class="language-link"
+          class="language-link language-link--left"
           :class="{'is-active' : this.$route.params.lang=='de'}"
           :href="'/de/' + this.$route.name"
         >
           DE
-        </a>
-        <a
-          class="language-link"
+        </a><!--
+        --><a
+          class="language-link language-link--right"
           :class="{'is-active' : this.$route.params.lang=='fr'}"
           :href="'/fr/' + this.$route.name"
         >
