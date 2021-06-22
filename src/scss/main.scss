@@ -124,7 +124,7 @@ li {
   &__subline {
     font-size: var(--s-text-s);
     display: inline-block;
-    width: 10em;
+    width: 14em;
     padding-left: 1em;
 
     @include viewport('mobile-l') {
