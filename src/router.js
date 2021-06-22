@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
+import getBrowserLocale from "./util/i18n/get-browser-locale"
+import { supportedLocalesInclude } from "./util/i18n/supported-locales"
 import RouterView from "./components/router-view.vue";
 import Home from './components/pages/home.vue';
 import Beratung from './components/pages/beratung.vue';
@@ -7,6 +9,18 @@ import Uebermich from './components/pages/ueber-mich.vue';
 import Impressum from './components/pages/impressum.vue';
 
 import { i18n } from "./index.js";
+
+function getStartingLocale() {
+  const browserLocale = getBrowserLocale({ countryCodeOnly: true })
+
+  if (supportedLocalesInclude(browserLocale)) {
+    return browserLocale
+  } else {
+    return process.env.VUE_APP_I18N_LOCALE || "de"
+  }
+}
+
+window.defaultLanguage = getStartingLocale();
 
 Vue.use(VueRouter);
 
@@ -22,6 +36,8 @@ const scrollBehavior = (to, from, savedPosition) => {
     return position;
   }
 }
+
+console.log(window.defaultLanguage);
 
 const router = new VueRouter({
   routes: [
@@ -69,7 +85,7 @@ const router = new VueRouter({
     },
     {
       path: "*",
-      redirect: "/de/home"
+      redirect: "/"+window.defaultLanguage+"/home"
     }
   ],
   scrollBehavior,
