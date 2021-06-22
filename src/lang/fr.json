@@ -1,13 +1,13 @@
 {
   "app": {
-    "title": "Tina Beerli – Psychologische Beratung &amp; Coaching",
-    "keywords": "Zürich, Paarberatung, Paarcoaching, Beziehungsberatung, Beziehungscoaching, Elternberatung, Familienberatung, Familiencoaching, Jugendberatung, Jugendcoaching, Sexberatung, Sexcoaching, Sexualtherapie, Sexualberatung, Sexualcoaching, Beratung, Coaching, therapeutische Beratung, Beziehung, Paar, Partnerschaft, Ambivalenz, Eifersucht, Fremdgehen, Dreiecksbeziehung, Seitensprung, Aussenbeziehung, Trennung, Scheidung, Abschied, Trauer, Zusammenbleiben, Auseinandergehen, häusliche Gewalt, Kontaktabbruch, Eltern, Elterncoaching, Elternschaft, Gemeinsame Elterliche Sorge, Gemeinsame Obhut, Alimenten, Unterhalt, Budget, Kinder, Jugendliche, Kleinkind, Baby, Geschwister, Loyalität, Loyalitätskonflikt, Kindeswohl, Besuchsrecht, Erziehung, Grenzsetzung, Schlafprobleme, Einnässen, Trotzphase, Familien, Patchworkfamilien, Co-Parenting, Pubertät, Adoleszenz, Vorpubertät, Drogen, Konsum, Monogamie, Polyamorie, polyamore, Offene Beziehung, Freundschaft Plus, friends with benefits, Affäre, Alternative Beziehungsformen, Sexualität, Selbstliebe, Selbstfürsorge, Identität, Identitätsfindung, Sexuelle Orientierung, Homosexualität, homosexuell, Bisexualität, bisexuell, Asexualität, asexuell, transsexuell, Trans, Nonbinär, pansexuell, intersexuell, inter",
-    "desc": "Tina Beerli, Psychologische Beratung &amp; Coaching in Zürich und Umgebung.",
-    "logoSubline": "Conseil psychologique &amp; coaching"
+    "title": "Tina Beerli – Consultations psychologiques & coaching",
+    "keywords": "consultation, coaching, consultations thérapeutique, consultation de couple / conseil de couple, coaching de couple, conseil en relation, coaching en relation, relation, couple, partenariat, ambivalence, la jalousie, infidélité, ménage à trois, séparation, rupture, divorce, deuil, rester ensemble, se quitter, violence conjugale, rupture de contact, parents, coaching des parents, conseil des parents, famille , conseil des familles, coaching des familles, famille recomposée, coparentalité , parentalité, autorité parantale conjointe, garde partagée, pension alimentaire, budget, enfants, adolescents, jeunesse, conseil pour les jeunes, coaching pour les jeunes, petite enfance, bébé, nourrisson, frères et soeurs, loyauté, conflit de loyauté , bien de l'enfant, droit de visite, éducation, établir des limits, des problèmes de sommeil, l’incontinence, opposition, puberté , adolescence, les drogues, consomation, monogamie, polygamie, polyamour, relation ouverte, friends with benefits, aventure amoureuse, relations alternatives, sexualité , conseil en sexualité, coaching en sexualité , therapie en sexualité , amour-propre, identité, recherge d'identité, orientation sexuelle, homosexualité, homosexuel, bisexualité, bisexuel, asexualité, asexuel, transsexuel, transidentité , non-binaires, pansexuel, intersexualité",
+    "desc": "Tina Beerli, Consultations psychologiques & coaching en allemand et français à Zürich et aux alentours.",
+    "logoSubline": "Consultations psychologiques & coaching"
   },
   "nav": {
     "home": "Accueil",
-    "consultation": "Consultation",
-    "about": "À propos"
+    "consultation": "Consultations",
+    "about": "Mon Parcours"
   }
 }
