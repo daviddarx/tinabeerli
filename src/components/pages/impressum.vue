@@ -16,9 +16,9 @@
 
       <p>
         Tina Beerli<br>
-        Psychologische Beratung &amp; Coaching<br>
-        Albisriederstrasse 100<br>
-        8003 Zürich
+        Praxis Lutherhof<br>
+        Lutherstrasse 6<br>
+        8004 Zürich
       </p>
 
       <p>
