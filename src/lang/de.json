@@ -1,0 +1,12 @@
+{
+  "app": {
+    "title": "Tina Beerli – Psychologische Beratung & Coaching",
+    "desc": "Tina Beerli, Psychologische Beratung & Coaching auf Deutsch und Französisch in Zürich und Umgebung.",
+    "logoSubline": "Psychologische Beratung & Coaching"
+  },
+  "nav": {
+    "home": "Home",
+    "consultation": "Beratung",
+    "about": "Über mich"
+  }
+}

@@ -87,7 +87,7 @@ li {
 
 .logo {
   position: fixed;
-  z-index: 20;
+  z-index: 19;
   top: var(--s-gutter);
   left: var(--s-gutter);
   margin-top: -0.5em;
@@ -124,7 +124,7 @@ li {
   &__subline {
     font-size: var(--s-text-s);
     display: inline-block;
-    width: 10em;
+    width: 14em;
     padding-left: 1em;
 
     @include viewport('mobile-l') {
@@ -155,7 +155,7 @@ li {
       box-sizing: border-box;
       padding: var(--s-gutter);
       background-color: var(--c-text);
-      max-width: 300px;
+      max-width: 320px;
       transform: translateX(100%);
       transition: transform var(--e-inout) var(--d-mobile);
     }
@@ -170,6 +170,12 @@ li {
     }
   }
 
+  &__links {
+    .is-mobile & {
+      padding-top: calc(var(--s-gutter) * 4);
+    }
+  }
+
   &__link {
     @include fontTitle;
 
@@ -180,6 +186,7 @@ li {
     .is-mobile & {
       color: var(--c-bg);
       opacity: 0;
+      margin-top: 0.3em;
       transform: translateY(calc(var(--s-gutter) * 2));
       transition: opacity linear var(--d-mobile-link-out), transform var(--e-out) var(--d-mobile-link-out) var(--d-mobile-link-out);
     }
@@ -254,6 +261,20 @@ li {
       transform: translateY(0);
       transition: opacity linear var(--d-mobile-link-in), transform var(--e-out) var(--d-mobile-link-in);
       transition-delay: $delay * 10s;
+    }
+  }
+
+  &__languages {
+    position: fixed;
+    display: flex;
+    top: -1px;
+    right: calc(var(--s-gutter) * 0.5);
+
+    .is-mobile & {
+      position: absolute;
+      top: var(--s-gutter);
+      right: auto;
+      left: var(--s-gutter);
     }
   }
 
@@ -373,6 +394,52 @@ li {
   }
 }
 
+.language-link {
+  @include fontTitle();
+
+  --s-dim: 2.5em;
+  --s-radius: 0.3em;
+
+  display: block;
+  font-size: var(--s-text-s);
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-top: 0;
+  width: var(--s-dim);
+  height: var(--s-dim);
+  text-align: center;
+  line-height: calc(var(--s-dim) * 0.95);
+  box-sizing: border-box;
+  border: 1px solid var(--c-text);
+  border-radius: 0 0 var(--s-radius) 0;
+  background-color: var(--c-bg);
+
+  &--left {
+    border-radius: 0 0 0 var(--s-radius);
+  }
+
+  .is-mobile & {
+    --s-dim: 3em;
+
+    margin-right: 0.75em;
+    border-radius: 100%;
+    color: var(--c-bg);
+    background-color: var(--c-text);
+    border-color: var(--c-bg);
+  }
+
+  &.is-active {
+    color: var(--c-bg);
+    background-color: var(--c-text);
+    pointer-events: none;
+
+    .is-mobile & {
+      color: var(--c-text);
+      background-color: var(--c-bg);
+    }
+  }
+}
+
 .content {
   position: relative;
   width: 50vw;
@@ -423,10 +490,22 @@ li {
     &.no-margin-top {
       margin-top: 0;
     }
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   p {
-    margin-bottom: var(--s-margin-bottom-p);
+    margin-top: var(--s-margin-bottom-p);
+
+    dd > & {
+      margin: 0;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
 
     @include viewport('mobile-l') {
       @include hyphens();
@@ -456,10 +535,6 @@ li {
 
     @include viewport('mobile-l') {
       margin-bottom: 0.5em;
-    }
-
-    p {
-      margin: 0;
     }
   }
 }
@@ -555,6 +630,10 @@ li {
   height: 100%;
   overflow: hidden;
   transition: opacity var(--e-inout) 1s;
+
+  @include viewport('vertical') {
+    top: 12vh;
+  }
 
   @include viewport('mobile-layout') {
     top: 12vh;

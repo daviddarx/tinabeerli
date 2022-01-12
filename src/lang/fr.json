@@ -1,0 +1,12 @@
+{
+  "app": {
+    "title": "Tina Beerli – Consultations psychologiques & coaching",
+    "desc": "Tina Beerli, Consultations psychologiques & coaching en allemand et français à Zürich et aux alentours.",
+    "logoSubline": "Consultations psychologiques & coaching"
+  },
+  "nav": {
+    "home": "Accueil",
+    "consultation": "Consultations",
+    "about": "À propos"
+  }
+}

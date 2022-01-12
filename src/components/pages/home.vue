@@ -26,9 +26,11 @@
 
 <script>
   import Vue from "vue";
-  import * as home from '../../../content/home_de/home_de.json';
+  import * as homeDE from '../../../content/home_de/home_de.json';
+  import * as homeFR from '../../../content/home_fr/home_fr.json';
   import getHTMLfromMDMixin from '../../mixins/getHTMLFromMD';
   import BackgroundDecoration from '../background-decoration.vue';
+  import { i18n } from "../../index.js";
 
   export default Vue.extend({
     components: {
@@ -37,7 +39,7 @@
     mixins: [getHTMLfromMDMixin],
     data() {
       return {
-        home: home,
+        home: (i18n.locale =='de') ? homeDE : homeFR,
         isDisplayed : false,
       }
     },
@@ -51,7 +53,7 @@
     },
     methods: {
       display: function() {
-        if (this.$parent.isLoaded == true) {
+        if (this.$parent.$parent.isLoaded == true) {
           this.isDisplayed = true;
         }
       }

@@ -12,30 +12,32 @@
       class="navigation__container"
       v-if="this.isDisplayed"
     >
-      <router-link
-        class="navigation__link"
-        to="/home"
-      >
-        <span class="navigation__el">
-          Home
-        </span>
-      </router-link>
-      <router-link
-        class="navigation__link"
-        to="/beratung"
-      >
-        <span class="navigation__el">
-          Beratung
-        </span>
-      </router-link>
-      <router-link
-        class="navigation__link"
-        to="/ueber-mich"
-      >
-        <span class="navigation__el">
-          Über mich
-        </span>
-      </router-link>
+      <div class="navigation__links">
+        <router-link
+          class="navigation__link"
+          :to="'/' + $i18n.locale + '/home'"
+        >
+          <span class="navigation__el">
+            {{$t('nav.home')}}
+          </span>
+        </router-link>
+        <router-link
+          class="navigation__link"
+          :to="'/' + $i18n.locale + '/beratung'"
+        >
+          <span class="navigation__el">
+            {{$t('nav.consultation')}}
+          </span>
+        </router-link>
+        <router-link
+          class="navigation__link"
+          :to="'/' + $i18n.locale + '/ueber-mich'"
+        >
+          <span class="navigation__el">
+            {{$t('nav.about')}}
+          </span>
+        </router-link>
+      </div>
 
       <div class="navigation__contact">
         <span class="contact__address">
@@ -44,6 +46,23 @@
         </span>
         +41 79 614 26 18<br>
         <a href="mailto:kontakt@tinabeerli.ch" target="_blank">kontakt@tinabeerli.ch</a>
+      </div>
+
+      <div class="navigation__languages">
+        <a
+          class="language-link language-link--left"
+          :class="{'is-active' : this.$route.params.lang=='de'}"
+          :href="'/de/' + this.$route.name"
+        >
+          DE
+        </a><!--
+        --><a
+          class="language-link language-link--right"
+          :class="{'is-active' : this.$route.params.lang=='fr'}"
+          :href="'/fr/' + this.$route.name"
+        >
+          FR
+        </a>
       </div>
     </div>
 
@@ -92,8 +111,7 @@
         this.isDisplayed = true;
       },
       resizeLister: function () {
-        const windowW = window.innerWidth || document.documentElement.clientWidth ||
-document.body.clientWidth;
+        const windowW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
         if (windowW <= this.isMobileStep && this.isMobile == false) {
           this.setMobileNavigation();
