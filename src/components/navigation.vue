@@ -111,8 +111,7 @@
         this.isDisplayed = true;
       },
       resizeLister: function () {
-        const windowW = window.innerWidth || document.documentElement.clientWidth ||
-document.body.clientWidth;
+        const windowW = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
         if (windowW <= this.isMobileStep && this.isMobile == false) {
           this.setMobileNavigation();
