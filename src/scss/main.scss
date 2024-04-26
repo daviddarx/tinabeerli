@@ -1,17 +1,19 @@
 @import url("https://hello.myfonts.net/count/3cebad");
-@import 'reset-css/reset.css';
+@import "reset-css/reset.css";
 
 @font-face {
-  font-family: 'Aestetico-Light';
-  src: url('../webfonts/aestetico_light.woff2') format('woff2'), url('../webfonts/aestetico_light.woff') format('woff');
+  font-family: "Aestetico-Light";
+  src: url("../webfonts/aestetico_light.woff2") format("woff2"),
+    url("../webfonts/aestetico_light.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Aestetico-Bold';
-  src: url('../webfonts/aestetico_bold.woff2') format('woff2'), url('../webfonts/aestetico_bold.woff') format('woff');
+  font-family: "Aestetico-Bold";
+  src: url("../webfonts/aestetico_bold.woff2") format("woff2"),
+    url("../webfonts/aestetico_bold.woff") format("woff");
 }
 
-@import './assets.scss';
+@import "./assets.scss";
 
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
@@ -62,7 +64,7 @@ a {
   text-decoration: underline;
   transition: opacity 0.25s ease-out;
 
-  @include hover () {
+  @include hover() {
     &:hover {
       opacity: 0.5;
     }
@@ -92,7 +94,7 @@ li {
   left: var(--s-gutter);
   margin-top: -0.5em;
 
-  @include viewport('mobile-layout') {
+  @include viewport("mobile-layout") {
     position: relative;
     top: auto;
     left: auto;
@@ -127,7 +129,7 @@ li {
     width: 14em;
     padding-left: 1em;
 
-    @include viewport('mobile-l') {
+    @include viewport("mobile-l") {
       display: block;
       padding-left: 0;
     }
@@ -188,7 +190,8 @@ li {
       opacity: 0;
       margin-top: 0.3em;
       transform: translateY(calc(var(--s-gutter) * 2));
-      transition: opacity linear var(--d-mobile-link-out), transform var(--e-out) var(--d-mobile-link-out) var(--d-mobile-link-out);
+      transition: opacity linear var(--d-mobile-link-out),
+        transform var(--e-out) var(--d-mobile-link-out) var(--d-mobile-link-out);
     }
 
     .is-mobile-displayed & {
@@ -200,7 +203,8 @@ li {
 
       opacity: 1;
       transform: translateY(0);
-      transition: opacity linear var(--d-mobile-link-in), transform var(--e-out) var(--d-mobile-link-in);
+      transition: opacity linear var(--d-mobile-link-in),
+        transform var(--e-out) var(--d-mobile-link-in);
     }
   }
 
@@ -253,13 +257,15 @@ li {
       display: block;
       opacity: 0;
       transform: translateY(calc(var(--s-gutter) * 2));
-      transition: opacity linear var(--d-mobile-link-out), transform var(--e-out) var(--d-mobile-link-out) var(--d-mobile-link-out);
+      transition: opacity linear var(--d-mobile-link-out),
+        transform var(--e-out) var(--d-mobile-link-out) var(--d-mobile-link-out);
     }
 
     .is-mobile-displayed & {
       opacity: 1;
       transform: translateY(0);
-      transition: opacity linear var(--d-mobile-link-in), transform var(--e-out) var(--d-mobile-link-in);
+      transition: opacity linear var(--d-mobile-link-in),
+        transform var(--e-out) var(--d-mobile-link-in);
       transition-delay: $delay * 10s;
     }
   }
@@ -289,7 +295,7 @@ li {
       --c-line: var(--c-bg);
     }
 
-    @include viewport('mobile-l') {
+    @include viewport("mobile-l") {
       --s-dim: calc(var(--s-gutter) * 1.5);
     }
 
@@ -449,7 +455,7 @@ li {
   padding-top: var(--s-margin-top-content);
   box-sizing: border-box;
 
-  @include viewport('mobile-layout') {
+  @include viewport("mobile-layout") {
     width: 100%;
     padding: var(--s-gutter);
     left: auto;
@@ -468,13 +474,13 @@ li {
   &__portrait {
     display: none;
 
-    @include viewport('mobile-layout') {
+    @include viewport("mobile-layout") {
       display: block;
       width: 30vw;
       margin-bottom: var(--s-gutter);
     }
 
-    @include viewport('mobile-l') {
+    @include viewport("mobile-l") {
       width: 100%;
     }
   }
@@ -507,7 +513,7 @@ li {
       margin-top: 0;
     }
 
-    @include viewport('mobile-l') {
+    @include viewport("mobile-l") {
       @include hyphens();
     }
   }
@@ -521,7 +527,7 @@ li {
     display: flex;
     flex-wrap: wrap;
 
-    @include viewport('mobile-l') {
+    @include viewport("mobile-l") {
       display: block;
     }
   }
@@ -533,7 +539,7 @@ li {
   dd {
     flex-basis: 40%;
 
-    @include viewport('mobile-l') {
+    @include viewport("mobile-l") {
       margin-bottom: 0.5em;
     }
   }
@@ -548,8 +554,14 @@ li {
   right: 50%;
   bottom: var(--s-gutter);
   opacity: 0;
-  transform: translate(var(--s-t-left), calc(var(--s-page-transition-y) + 100%));
-  transition: transform var(--e-out) calc(var(--d-page-transition-y) * 1.2), opacity ease-out 0.2s;
+  transform: translate(
+    var(--s-t-left),
+    calc(var(--s-page-transition-y) + 100%)
+  );
+  transition: transform var(--e-out) calc(var(--d-page-transition-y) * 1.2),
+    opacity ease-out 0.2s;
+  border-radius: 0.2em;
+  overflow: hidden;
 
   &.is-loaded {
     opacity: 1;
@@ -559,12 +571,12 @@ li {
     transform: translate(var(--s-t-left), 0);
   }
 
-  @include viewport('vertical') {
+  @include viewport("vertical") {
     height: calc(50vh - var(--s-gutter) * 4);
     bottom: calc(var(--s-gutter) * 4);
   }
 
-  @include viewport('mobile-layout') {
+  @include viewport("mobile-layout") {
     display: none;
   }
 }
@@ -582,7 +594,7 @@ li {
     top: 90vh;
   }
 
-  @include viewport('mobile-layout') {
+  @include viewport("mobile-layout") {
     display: none;
   }
 
@@ -592,7 +604,7 @@ li {
     display: none;
     margin-top: calc(var(--s-gutter) * 4);
 
-    @include viewport('mobile-layout') {
+    @include viewport("mobile-layout") {
       display: block;
     }
 
@@ -616,7 +628,7 @@ li {
   font-size: var(--s-text-s);
   margin-top: calc(var(--s-gutter) * 2);
 
-  @include viewport('mobile-layout') {
+  @include viewport("mobile-layout") {
     margin-top: calc(var(--s-gutter) * 2);
   }
 }
@@ -631,19 +643,19 @@ li {
   overflow: hidden;
   transition: opacity var(--e-inout) 1s;
 
-  @include viewport('vertical') {
+  @include viewport("vertical") {
     top: 12vh;
   }
 
-  @include viewport('mobile-layout') {
+  @include viewport("mobile-layout") {
     top: 12vh;
   }
 
-  @include viewport('mobile-l') {
+  @include viewport("mobile-l") {
     top: 40vw;
   }
 
-  @include viewport('mobile') {
+  @include viewport("mobile") {
     top: 55vw;
   }
 
@@ -657,7 +669,7 @@ li {
     opacity: 0;
     transition: opacity linear 0.5s;
 
-    @include viewport('mobile-layout') {
+    @include viewport("mobile-layout") {
       width: 200vw;
       margin-left: -100vw;
     }
@@ -740,7 +752,7 @@ li {
     top: 0;
     left: 0;
 
-    @include viewport('mobile-layout') {
+    @include viewport("mobile-layout") {
       margin: 0;
       padding: 0;
     }
