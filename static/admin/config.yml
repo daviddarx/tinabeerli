@@ -103,8 +103,8 @@ collections:
                     widget: "markdown"
                     required: false
                     buttons:
-                    - bold
-                    - link
+                      - bold
+                      - link
 
   - name: "beratung_fr"
     label: "Beratung FR"
@@ -157,8 +157,8 @@ collections:
                     widget: "markdown"
                     required: false
                     buttons:
-                    - bold
-                    - link
+                      - bold
+                      - link
 
   - name: "uebermich_de"
     label: "Über mich DE"
@@ -235,6 +235,52 @@ collections:
     delete: false
     folder: "content/impressum_fr/"
     slug: "impressum_fr"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "markdown"
+        buttons:
+          - bold
+          - link
+          - heading-three
+          - bulleted-list
+
+  - name: "datenschutz_de"
+    label: "Datenschutz DE"
+    create: false
+    delete: false
+    folder: "content/datenschutz_de/"
+    slug: "datenschutz_de"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "markdown"
+        buttons:
+          - bold
+          - link
+          - heading-three
+          - bulleted-list
+
+  - name: "datenschutz_fr"
+    label: "Datenschutz FR"
+    create: false
+    delete: false
+    folder: "content/datenschutz_fr/"
+    slug: "datenschutz_fr"
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"

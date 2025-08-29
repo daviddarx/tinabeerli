@@ -8,5 +8,9 @@
     "home": "Home",
     "consultation": "Beratung",
     "about": "Über mich"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutz"
   }
 }

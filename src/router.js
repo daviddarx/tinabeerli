@@ -1,26 +1,24 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from "vue";
+import VueRouter from "vue-router";
 import getBrowserLocale from "./util/i18n/get-browser-locale";
 import { supportedLocalesInclude } from "./util/i18n/supported-locales";
-import {
-  setDocumentLang,
-  setDocumentTitle
-} from "./util/i18n/document";
+import { setDocumentLang, setDocumentTitle } from "./util/i18n/document";
 import RouterView from "./components/router-view.vue";
-import Home from './components/pages/home.vue';
-import Beratung from './components/pages/beratung.vue';
-import Uebermich from './components/pages/ueber-mich.vue';
-import Impressum from './components/pages/impressum.vue';
+import Home from "./components/pages/home.vue";
+import Beratung from "./components/pages/beratung.vue";
+import Uebermich from "./components/pages/ueber-mich.vue";
+import Impressum from "./components/pages/impressum.vue";
+import Datenschutz from "./components/pages/datenschutz.vue";
 
 import { i18n } from "./index.js";
 
 function getStartingLocale() {
-  const browserLocale = getBrowserLocale({ countryCodeOnly: true })
+  const browserLocale = getBrowserLocale({ countryCodeOnly: true });
 
   if (supportedLocalesInclude(browserLocale)) {
-    return browserLocale
+    return browserLocale;
   } else {
-    return process.env.VUE_APP_I18N_LOCALE || "de"
+    return process.env.VUE_APP_I18N_LOCALE || "de";
   }
 }
 
@@ -39,7 +37,7 @@ const scrollBehavior = (to, from, savedPosition) => {
 
     return position;
   }
-}
+};
 
 const router = new VueRouter({
   routes: [
@@ -60,44 +58,51 @@ const router = new VueRouter({
       },
       children: [
         {
-          label: 'Home',
+          label: "Home",
           path: "home",
           name: "home",
           component: Home,
-          meta: { pageTitle: 'Home' }
+          meta: { pageTitle: "Home" }
         },
         {
-          label: 'Beratung',
-          path: 'beratung',
-          name: 'beratung',
+          label: "Beratung",
+          path: "beratung",
+          name: "beratung",
           component: Beratung,
-          meta: { pageTitle: 'Beratung' }
+          meta: { pageTitle: "Beratung" }
         },
         {
-          label: 'Über mich',
+          label: "Über mich",
           path: "ueber-mich",
           name: "ueber-mich",
           component: Uebermich,
-          meta: { pageTitle: 'Über mich' }
+          meta: { pageTitle: "Über mich" }
         },
         {
-          label: 'Impressum',
+          label: "Impressum",
           path: "impressum",
           name: "impressum",
           component: Impressum,
-          meta: { pageTitle: 'Impressum' }
+          meta: { pageTitle: "Impressum" }
+        },
+        {
+          label: "Datenschutz",
+          path: "datenschutz",
+          name: "datenschutz",
+          component: Datenschutz,
+          meta: { pageTitle: "Datenschutz" }
         }
       ]
     },
     {
       path: "*",
-      redirect: "/"+window.defaultLanguage+"/home"
+      redirect: "/" + window.defaultLanguage + "/home"
     }
   ],
   scrollBehavior,
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  linkActiveClass: 'is-current',
+  linkActiveClass: "is-current"
 });
 
 export default router;
