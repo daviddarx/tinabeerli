@@ -9,7 +9,7 @@
         Badenerstrasse 21, 8004 Zürich</a
       ><br /><br />
     </span>
-    +41 79 614 26 18<br />
+    <!-- +41 79 614 26 18<br /> -->
     <a href="mailto:kontakt@tinabeerli.ch" target="_blank"
       >kontakt@tinabeerli.ch</a
     >
