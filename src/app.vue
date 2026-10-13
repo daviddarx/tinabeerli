@@ -22,12 +22,8 @@
     <div class="content">
       <router-view :key="$route.fullPath" ref="view"> </router-view>
 
-      <custom-contact class="contact--mobile"></custom-contact>
-
       <custom-footer></custom-footer>
     </div>
-
-    <custom-contact></custom-contact>
 
     <custom-transition></custom-transition>
   </div>
@@ -38,7 +34,6 @@ import Vue from "vue";
 import Logo from "./components/logo.vue";
 import CustomNavigation from "./components/navigation.vue";
 import CustomFooter from "./components/footer.vue";
-import CustomContact from "./components/contact.vue";
 import CustomTransition from "./components/transition.vue";
 import Portrait from "./components/portrait.vue";
 import browserDetect from "./browser-detect";
@@ -49,7 +44,6 @@ export default Vue.extend({
     logo: Logo,
     "custom-navigation": CustomNavigation,
     "custom-footer": CustomFooter,
-    "custom-contact": CustomContact,
     "custom-transition": CustomTransition,
     portrait: Portrait,
     "browser-warning": BrowserWarning

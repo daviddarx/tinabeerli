@@ -2,6 +2,8 @@ backend:
   name: github
   repo: daviddarx/tinabeerli
 
+local_backend: true
+
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
 
@@ -189,6 +191,52 @@ collections:
     delete: false
     folder: "content/uebermich_fr/"
     slug: "uebermich_fr"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "markdown"
+        buttons:
+          - bold
+          - link
+          - heading-three
+          - bulleted-list
+
+  - name: "kontakt_de"
+    label: "Kontakt DE"
+    create: false
+    delete: false
+    folder: "content/kontakt_de/"
+    slug: "kontakt_de"
+    extension: "json"
+    format: "json"
+    summary: "Version: {{version}} - {{title}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+
+      - label: "Content"
+        name: "content"
+        widget: "markdown"
+        buttons:
+          - bold
+          - link
+          - heading-three
+          - bulleted-list
+
+  - name: "kontakt_fr"
+    label: "Kontakt FR"
+    create: false
+    delete: false
+    folder: "content/kontakt_fr/"
+    slug: "kontakt_fr"
     extension: "json"
     format: "json"
     summary: "Version: {{version}} - {{title}}"

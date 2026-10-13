@@ -7,6 +7,7 @@ import RouterView from "./components/router-view.vue";
 import Home from "./components/pages/home.vue";
 import Beratung from "./components/pages/beratung.vue";
 import Uebermich from "./components/pages/ueber-mich.vue";
+import Kontakt from "./components/pages/kontakt.vue";
 import Impressum from "./components/pages/impressum.vue";
 import Datenschutz from "./components/pages/datenschutz.vue";
 
@@ -77,6 +78,13 @@ const router = new VueRouter({
           name: "ueber-mich",
           component: Uebermich,
           meta: { pageTitle: "Über mich" }
+        },
+        {
+          label: "Kontakt",
+          path: "kontakt",
+          name: "kontakt",
+          component: Kontakt,
+          meta: { pageTitle: "Kontakt" }
         },
         {
           label: "Impressum",
