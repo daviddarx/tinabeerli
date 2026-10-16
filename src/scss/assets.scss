@@ -82,6 +82,7 @@ $breakpoints: (
   --s-gutter: 4vw;
   --s-text: 2rem;
   --s-text-s: calc(var(--s-text) * 0.6);
+  --s-text-cta: clamp(var(--s-text-s), 20px, var(--s-text));
   --s-text-logo: calc(var(--s-text) * 1.8);
   --s-line-height: 1.5;
   --s-margin-top-content: calc(50vh - 0.27em);

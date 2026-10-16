@@ -27,6 +27,7 @@
   },
   "scripts": {
     "start": "parcel ./src/index.html",
+    "cms": "(for i in $(seq 20); do sleep 0.5; nc -z localhost 8081 2>/dev/null && printf '\\nAdmin: http://localhost:1234/admin/index.html\\n\\n' && break; done) & npx --yes netlify-cms-proxy-server",
     "build": "parcel build ./src/index.html",
     "clean": "rm -rf .cache/ && rm -rf dist/",
     "lint": "npm run lint:js && npm run lint:css",

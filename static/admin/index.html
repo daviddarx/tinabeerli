@@ -10,6 +10,62 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+
+  <script>
+    CMS.registerEditorComponent({
+      id: "cta",
+      label: "CTA Link",
+      fields: [
+        {
+          name: "label",
+          label: "Label",
+          widget: "string"
+        },
+        {
+          name: "url",
+          label: "URL (https://... oder mailto:...)",
+          widget: "string"
+        },
+        {
+          name: "blank",
+          label: "In neuem Tab öffnen",
+          widget: "boolean",
+          required: false,
+          default: false
+        }
+      ],
+      pattern: /^<a class="cta" href="(.*?)"( target="_blank")?>(.*?)<\/a>$/,
+      fromBlock: function(match) {
+        return {
+          url: match[1],
+          blank: Boolean(match[2]),
+          label: match[3]
+        };
+      },
+      toBlock: function(obj) {
+        return (
+          '<a class="cta" href="' +
+          obj.url +
+          '"' +
+          (obj.blank ? ' target="_blank"' : "") +
+          ">" +
+          obj.label +
+          "</a>"
+        );
+      },
+      toPreview: function(obj) {
+        return (
+          '<a class="cta" href="' +
+          obj.url +
+          '"' +
+          (obj.blank ? ' target="_blank"' : "") +
+          ">" +
+          obj.label +
+          "</a>"
+        );
+      }
+    });
+  </script>
 </body>
 
 </html>

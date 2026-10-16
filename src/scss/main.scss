@@ -407,7 +407,7 @@ li {
   --s-radius: 0.3em;
 
   display: block;
-  font-size: var(--s-text-s);
+  font-size: var(--s-text-cta);
   text-transform: uppercase;
   text-decoration: none;
   margin-top: 0;
@@ -440,6 +440,33 @@ li {
     pointer-events: none;
 
     .is-mobile & {
+      color: var(--c-text);
+      background-color: var(--c-bg);
+    }
+  }
+}
+
+.cta {
+  @include fontTitle();
+
+  --s-dim: 2.5em;
+  --s-radius: 0.3em;
+
+  display: inline-block;
+  font-size: var(--s-text-cta);
+  text-decoration: none;
+  height: var(--s-dim);
+  line-height: calc(var(--s-dim) * 0.95);
+  padding: 0 1.25em;
+  box-sizing: border-box;
+  color: var(--c-bg);
+  background-color: var(--c-text);
+  border: 1px solid var(--c-text);
+  border-radius: var(--s-radius);
+
+  @include hover() {
+    &:hover {
+      opacity: 1;
       color: var(--c-text);
       background-color: var(--c-bg);
     }

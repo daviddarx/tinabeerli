@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": "src/scss/assets.scss",
+      "options": {
+        "singleQuote": true
+      }
+    }
+  ]
+}
